@@ -25,6 +25,7 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(GateContract $gate)
     {
         parent::registerPolicies($gate);
+        
 
         $gate->before(function ($user, $ability) {
             if ($user->admin) {

@@ -63,10 +63,10 @@ class AdminController extends Controller
         }
 
         $members = Member::with('group')->get();
-        $columns = ['id', 'email', 'first_name', 'last_name', 'country', 'group.name', 'created_at', 'birthdate', 'faculty'];
-        $headers = ['ID', 'Email', 'First Name', 'Last Name', 'Country', 'Team Name', 'Registered At', 'Birthdate', 'Faculty/School'];
+        $columns = ['id', 'email', 'first_name', 'last_name', 'sex','country', 'group.name', 'created_at', 'birthdate', 'uni', 'faculty', 'years_study','phone','image', 'tshirt','cv'];
+        $headers = ['ID', 'Email', 'First Name', 'Last Name', 'Sex', 'Country', 'Team Name', 'Registered At', 'Birthdate', 'University', 'Faculty', 'Year of Studies','Phone Number','Image','T-shirt', 'CV'];
         $csv = $this->exportCsv($members, $columns, $headers);
-        $csvName = 'eca-members-'.date('Y-m-d-His').'.csv';
+        $csvName = 'ec-members-'.date('Y-m-d-His').'.csv';
 
         return response($csv, 200, [
             'Content-type'=>'text/csv',

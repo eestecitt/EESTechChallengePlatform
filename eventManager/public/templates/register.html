@@ -1,16 +1,5 @@
 <div ng-controller="registerController">
 	<div class="ui main container row" ng-show="!appConfig.registration_enabled">
-		<div class="ui icon message">
-			<i class="info icon"></i>
-			<div class="content">
-				<div class="header">
-					The deadline has passed
-				</div>
-				<p>Thank you for the participation, the results will be announced on 13th of April 2016!</p>
-			</div>
-		</div>
-	</div>
-	<div class="ui main container row" ng-show="appConfig.registration_enabled">
 		<div class="ui three column centered padded grid">
 			<div class="column">
 				<form action="" class="ui form header center aligned" name="nameForm">
@@ -22,18 +11,9 @@
 					    </div>
 					</div>
 				</form>
-			</div>
-		</div>
-		<div class="ui three cards">
-			<div class="ui blurring dimmed dimmable segment card member2">
-				<div class="ui inverted active flex center dimmer">
-					<button class="circular huge green ui icon button">
-						<i class="icon add user"></i>
-					</button>
-				</div>
 				<div class="content ">
 					<div class="ui header centered aligned">Team member</div>
-					<div class="description">
+					<div class="ui header centered aligned">
 						<form action="" class="ui form" name="member2Form">
 							<div class="field">
 								<label>First Name</label>
@@ -54,7 +34,7 @@
 		    					<input type="date" name="birth" placeholder="Birth Date" required ng-model="member2.birthdate">
 								<div class="ui pointing red basic label" ng-show="(member2Form.birth.$dirty || submitted2)  && member2Form.birth.$error.required">
 							    	Birth date is required!
-							    </div>
+							   </div>
 							</div>
 							<div class="field">
 								<label>Gender</label>
@@ -62,6 +42,7 @@
 									<option value="">Select Gender</option>
 									<option value='m'>Male</option>
 									<option value='f'>Female</option>
+									<option Value='o'>Other</option>
 								</select>
 								<div class="ui pointing red basic label" ng-show="(member2Form.gender.$dirty || submitted2)  && member2Form.gender.$error.required">
 							    	Gender is required!
@@ -78,25 +59,17 @@
 							    </div>
 							</div>
 							<div class="field">
-								<label>Elementary School/HighSchool - Class profile/Faculty/Department</label>
-		    					<input type="text" name="faculty" placeholder="Faculty/Department" required ng-model="member2.faculty">
-								<div class="ui pointing red basic label" ng-show="(member2Form.faculty.$dirty || submitted2)  && member2Form.faculty.$error.required">
-							    	 Elementary School/HighSchool - Class profile/Faculty/Department is required!
+								<label>University</label>
+		    					<input type="text" name="uni" placeholder="University" required ng-model="member2.uni">
+								<div class="ui pointing red basic label" ng-show="(member2Form.uni.$dirty || submitted2)  && member2Form.uni.$error.required">
+							    	University's name is required!
 							    </div>
 							</div>
 							<div class="field">
-								<label>Study level</label>
-		    					<select name="study_level" placeholder="Study level" required ng-model="member2.study_level">
-									<option value="">Select study level</option>
-									<option value='elementary-school'>Elementary School</option>
-									<option value='high-school'>High School</option>
-									<option value='graduate'>Graduate</option>
-									<option value='master'>Master</option>
-									<option value='phd'>PhD</option>
-									<option value='other'>Other</option>
-								</select>
-								<div class="ui pointing red basic label" ng-show="(member2Form.study_level.$dirty || submitted2)  && member2Form.study_level.$error.required">
-							    	Study level is required!
+								<label>Faculty</label>
+		    					<input type="text" name="faculty" placeholder="Faculty" required ng-model="member2.faculty">
+								<div class="ui pointing red basic label" ng-show="(member2Form.faculty.$dirty || submitted2)  && member2Form.faculty.$error.required">
+							    	Faculty is required!
 							    </div>
 							</div>
 							<div class="field">
@@ -113,7 +86,7 @@
 								</select>
 								<div class="ui pointing red basic label" ng-show="(member2Form.years_study.$dirty || submitted2)  && member2Form.years_study.$error.required">
 							    	Study year is required!
-							    </div>
+							   </div>
 							</div>
 							<div class="field">
 								<label>Email</label>
@@ -139,7 +112,67 @@
 							    	Password confirmation is required!
 							    </div>
 							</div>
-							<div class="field ui slider checkbox">
+							<div class="field">
+                     	<label>Phone Number</label>
+                        <input type="text" name="phone_number" placeholder="Phone Number" required ng-model="member2.phone">
+                        <div class="ui pointing red basic label" ng-show="(member2Form.phone.$dirty || submitted2)  && member2Form.phone.$error.required">
+                        	Phone Number is required!
+                        </div>
+                    	</div>
+							<div class="field">
+                     	<label>Image</label>
+                        <input type="text" name="image" placeholder="Give a long active link with one picture of you" required ng-model="member2.image">
+                        <div class="ui pointing red basic label" ng-show="(member2Form.image.$dirty || submitted2)  && member2Form.image.$error.required">
+                        	A link of an image is required!
+                        </div>
+                     </div>
+                     <div class="field">
+								<label>T-Shirt</label>
+		    					<select name="tshirt" placeholder="T-Shirt size" required ng-model="member2.tshirt">
+									<option value="">Select your T-Shirt size</option>
+									<option value='S'>S</option>
+									<option value='M'>M</option>
+									<option value='L'>L</option>
+									<option value='XL'>XL</option>
+									<option value='XXL'>XXL</option>
+								</select>
+								<div class="ui pointing red basic label" ng-show="(member2Form.tshirt.$dirty || submitted2)  && member2Form.tshirt.$error.required">
+							    	Size of T-Shirt is required!
+							   </div>
+							</div>
+							<div class="field">
+                     	<label>CV</label>
+                        <input type="text" name="cv" placeholder="CV link" required ng-model="member2.cv">
+                        <div class="ui pointing red basic label" ng-show="(member2Form.cv.$dirty || submitted2)  && member2Form.cv.$error.required">
+                        	A CV link is required!
+                        </div>
+                     </div>
+                     <div class="field">
+								<label>City</label>
+		    					<select name="city" placeholder="City" required ng-model="member2.city">
+									<option value="">Select the city in which you will participate for the Local Round</option>
+									<option value='1'>Almería</option>
+									<option value='2'>Ankara</option>
+									<option value='3'>Athens</option>
+									<option value='4'>Belgrade</option>
+									<option value='5'>Catania</option>
+									<option value='6'>Cosenza</option>
+									<option value='7'>Gliwice</option>
+									<option value='8'>Kraków</option>
+									<option value='9'>Lille</option>
+									<option value='10'>Novi Sad</option>
+									<option value='11'>Patras</option>
+									<option value='12'>Sarajevo</option>
+									<option value='13'>Tirana</option>
+									<option value='14'>Tuzla</option>
+									<option value='15'>Zagreb</option>
+									<option value='16'>Zurich</option>
+								</select>
+								<div class="ui pointing red basic label" ng-show="(member2Form.tshirt.$dirty || submitted2)  && member2Form.tshirt.$error.required">
+							    	Name of the city is required!
+							   </div>
+							</div>
+                     <div class="field ui slider checkbox">
 								<input type="checkbox" name="agrees" required ng-model="member2.agrees">
 								<label>Accept <a target="_blank" ui-sref="terms">terms and conditions</a></label>
 								<div class="ui pointing red basic label" ng-show="(member2Form.agrees.$dirty || submitted2)  && member2Form.agrees.$error.required">
@@ -147,274 +180,14 @@
 							    </div>
 							</div>
 						</form>
-					</div>
-				</div>
-				<div class="ui one bottom attached icon buttons">
-					<div class="ui red button">
-						<i class="remove user icon"></i>
-						Remove
-					</div>
-				</div>
-			</div>
-			<div class="ui card">
-				<div class="content">
-					<div class="ui header centered aligned">Lead member</div>
-					<div class="description">
-						<form action="" class="ui form" name="member1Form">
-							<div class="field">
-								<label>First Name</label>
-		    					<input type="text" name="first_name" placeholder="First Name" required ng-model="member1.first_name">
-								<div class="ui pointing red basic label" ng-show="(member1Form.first_name.$dirty || submitted)  && member1Form.first_name.$error.required">
-							    	First name is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Last Name</label>
-		    					<input type="text" name="last_name" placeholder="Last Name" required ng-model="member1.last_name">
-								<div class="ui pointing red basic label" ng-show="(member1Form.last_name.$dirty || submitted)  && member1Form.last_name.$error.required">
-							    	Last name is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Birth Date</label>
-		    					<input type="date" name="birth" placeholder="Birth Date" required ng-model="member1.birthdate">
-								<div class="ui pointing red basic label" ng-show="(member1Form.birth.$dirty || submitted)  && member1Form.birth.$error.required">
-							    	Birth date is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Gender</label>
-		    					<select name="gender" required ng-model="member1.sex">
-									<option value="">Select Gender</option>
-									<option value='m'>Male</option>
-									<option value='f'>Female</option>
-								</select>
-								<div class="ui pointing red basic label" ng-show="(member1Form.gender.$dirty || submitted)  && member1Form.gender.$error.required">
-							    	Gender is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Country</label>
-		    					<select name="country" placeholder="Country" required ng-model="member1.country">
-									<option selected value="">Select country</option>
-									<option ng-repeat="country in countries" value="{{country.alpha2Code}}">{{country.name}}</option>
-								</select>
-								<div class="ui pointing red basic label" ng-show="(member1Form.country.$dirty || submitted)  && member1Form.country.$error.required">
-							    	Country is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Elementary School/HighSchool - Class profile/Faculty/Department</label>
-		    					<input type="text" name="faculty" placeholder="Elementary School/HighSchool - Class profile/Faculty/Department" required ng-model="member1.faculty">
-								<div class="ui pointing red basic label" ng-show="(member1Form.faculty.$dirty || submitted1)  && member1Form.faculty.$error.required">
-							    	Elementary School/HighSchool - Class profile/Faculty/Department is required is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Study level</label>
-		    					<select name="study_level" placeholder="Study level" required ng-model="member1.study_level">
-									<option value="">Select study level</option>
-						            <option value='elementary-school'>Elementary School</option>
-						            <option value='high-school'>High School</option>
-						            <option value='graduate'>Graduate</option>
-						            <option value='master'>Master</option>
-						            <option value='phd'>PhD</option>
-						            <option value='other'>Other</option>
-								</select>
-								<div class="ui pointing red basic label" ng-show="(member1Form.study_level.$dirty || submitted)  && member1Form.study_level.$error.required">
-							    	Study level is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Study year</label>
-		    					<select name="years_study" placeholder="Study level" required ng-model="member1.years_study">
-									<option value="">Select study year</option>
-									<option value='1'>1</option>
-									<option value='2'>2</option>
-									<option value='3'>3</option>
-									<option value='4'>4</option>
-									<option value='5'>5</option>
-									<option value='6'>6</option>
-            						<option value='0'>Other</option>
-								</select>
-								<div class="ui pointing red basic label" ng-show="(member1Form.years_study.$dirty || submitted)  && member1Form.years_study.$error.required">
-							    	Study year is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Email</label>
-		    					<input type="email" name="email" placeholder="Email" required ng-model="member1.email">
-								<div class="ui pointing red basic label" ng-show="(member1Form.email.$dirty || submitted)  && member1Form.email.$error.required">
-							    	Email is required!
-							    </div>
-								<div class="ui pointing red basic label" ng-show="member1Form.email.$error.email">
-							    	Not valid email!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Password</label>
-		    					<input type="password" name="password" placeholder="Password" required ng-model="member1.password">
-								<div class="ui pointing red basic label" ng-show="(member1Form.password.$dirty || submitted)  && member1Form.password.$error.required">
-							    	Password is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Confirm Password</label>
-		    					<input type="password" name="password_confirmation" placeholder="Confirm Password" required ng-model="member1.password_confirmation">
-								<div class="ui pointing red basic label" ng-show="(member1Form.password_confirmation.$dirty || submitted)  && member1Form.password_confirmation.$error.required">
-							    	Password confirmation is required!
-							    </div>
-							</div>
-							<div class="field ui slider checkbox">
-								<input type="checkbox" name="agrees" required ng-model="member1.agrees">
-								<label>Accept <a target="_blank" ui-sref="terms">terms and conditions</a></label>
-								<div class="ui pointing red basic label" ng-show="(member1Form.agrees.$dirty || submitted)  && member1Form.agrees.$error.required">
-							    	Accepting terms and conditions is required.
-							    </div>
-							</div>
-						</form>
-					</div>
-				</div>
+				<div class="column header center aligned">
 				<div class="ui one bottom attached icon buttons" ng-click="signup()">
-					<div class="ui green button" ng-class="{ disabled: !appConfig.registration_enabled }">
+					<div class="ui green button" ng-class="{!appConfig.registration_enabled }">
 						<i class="signup icon"></i>
 						Register
 					</div>
 				</div>
-			</div>
-			<div class="ui blurring dimmed dimmable segment card member3">
-				<div class="ui inverted active flex center dimmer">
-					<button class="circular huge green ui icon button">
-						<i class="icon add user"></i>
-					</button>
 				</div>
-				<div class="content">
-					<div class="ui header centered aligned">Team member</div>
-					<div class="description">
-						<form action="" class="ui form" name="member3Form">
-							<div class="field">
-								<label>First Name</label>
-		    					<input type="text" name="first_name" placeholder="First Name" required ng-model="member3.first_name">
-								<div class="ui pointing red basic label" ng-show="(member3Form.first_name.$dirty || submitted3)  && member3Form.first_name.$error.required">
-							    	First name is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Last Name</label>
-		    					<input type="text" name="last_name" placeholder="Last Name" required ng-model="member3.last_name">
-								<div class="ui pointing red basic label" ng-show="(member3Form.last_name.$dirty || submitted3)  && member3Form.last_name.$error.required">
-							    	Last name is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Birth Date</label>
-		    					<input type="date" name="birth" placeholder="Birth Date" required ng-model="member3.birthdate">
-								<div class="ui pointing red basic label" ng-show="(member3Form.birth.$dirty || submitted3)  && member3Form.birth.$error.required">
-							    	Birth date is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Gender</label>
-		    					<select name="gender" placeholder="Gender" required ng-model="member3.sex">
-									<option value="">Select Gender</option>
-									<option value='m'>Male</option>
-									<option value='f'>Female</option>
-								</select>
-								<div class="ui pointing red basic label" ng-show="(member3Form.gender.$dirty || submitted3)  && member3Form.gender.$error.required">
-							    	Gender is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Country</label>
-		    					<select name="country" placeholder="Country" required ng-model="member3.country">
-									<option selected value="">Select country</option>
-									<option ng-repeat="country in countries" value="{{country.alpha2Code}}">{{country.name}}</option>
-								</select>
-								<div class="ui pointing red basic label" ng-show="(member3Form.country.$dirty || submitted)  && member3Form.country.$error.required">
-							    	Country is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Elementary School/HighSchool - Class profile/Faculty/Department</label>
-		    					<input type="text" name="faculty" placeholder="Elementary School/HighSchool - Class profile/Faculty/Department" required ng-model="member3.faculty">
-								<div class="ui pointing red basic label" ng-show="(member3Form.faculty.$dirty || submitted3)  && member3Form.faculty.$error.required">
-							    	Elementary School/HighSchool - Class profile/Faculty/Department is required is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Study level</label>
-		    					<select name="study_level" placeholder="Study level" required ng-model="member3.study_level">
-									<option value="">Select study level</option>
-						            <option value='elementary-school'>Elementary School</option>
-						            <option value='high-school'>High School</option>
-						            <option value='graduate'>Graduate</option>
-						            <option value='master'>Master</option>
-						            <option value='phd'>PhD</option>
-						            <option value='other'>Other</option>
-								</select>
-								<div class="ui pointing red basic label" ng-show="(member3Form.study_level.$dirty || submitted3)  && member3Form.study_level.$error.required">
-							    	Study level is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Study year</label>
-		    					<select name="years_study" placeholder="Study level" required ng-model="member3.years_study">
-									<option value="">Select study year</option>
-									<option value='1'>1</option>
-									<option value='2'>2</option>
-									<option value='3'>3</option>
-									<option value='4'>4</option>
-									<option value='5'>5</option>
-									<option value='6'>6</option>
-            						<option value='0'>Other</option>
-								</select>
-								<div class="ui pointing red basic label" ng-show="(member3Form.years_study.$dirty || submitted3)  && member3Form.years_study.$error.required">
-							    	Study year is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Email</label>
-		    					<input type="email" name="email" placeholder="Email" required ng-model="member3.email">
-								<div class="ui pointing red basic label" ng-show="(member3Form.email.$dirty || submitted3)  && member3Form.email.$error.required">
-							    	Email is required!
-							    </div>
-								<div class="ui pointing red basic label" ng-show="member3Form.email.$error.email">
-							    	Not valid email!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Password</label>
-		    					<input type="password" name="password" placeholder="Password" required ng-model="member3.password">
-								<div class="ui pointing red basic label" ng-show="(member3Form.password.$dirty || submitted3)  && member3Form.password.$error.required">
-							    	Password is required!
-							    </div>
-							</div>
-							<div class="field">
-								<label>Confirm Password</label>
-		    					<input type="password" name="password_confirmation" placeholder="Confirm Password" required ng-model="member3.password_confirmation">
-								<div class="ui pointing red basic label" ng-show="(member3Form.password_confirmation.$dirty || submitted3)  && member3Form.password_confirmation.$error.required">
-							    	Password confirmation is required!
-							    </div>
-							</div>
-							<div class="field ui slider checkbox">
-								<input type="checkbox" name="agrees" required ng-model="member3.agrees">
-								<label>Accept <a target="_blank" ui-sref="terms">terms and conditions</a></label>
-								<div class="ui pointing red basic label" ng-show="(member3Form.agrees.$dirty || submitted3)  && member3Form.agrees.$error.required">
-							    	Accepting terms and conditions is required.
-							    </div>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="ui one bottom attached icon buttons">
-					<div class="ui red button">
-						<i class="remove user icon"></i>
-						Remove
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div class="ui three column centered grid">
 		<div class="ui negative message" ng-show="error.length">
 			<div class="header">

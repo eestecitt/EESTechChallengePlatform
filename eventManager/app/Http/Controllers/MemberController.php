@@ -74,6 +74,13 @@ class MemberController extends Controller
         $member->faculty = $request->input("faculty");
         $member->years_study = $request->input("years_study");
         $member->study_level = $request->input("study_level");
+        $member->uni = $request->input("uni");
+        $member->phone = $request->input("phone");
+        $member->image = $request->input("image");
+        $member->tshirt = $request->input("tshirt");
+        $member->cv = $request->input("cv");
+        $member->city = $request->input("city");
+        $member->activated = "false";
         $member->save();
         return response()->json($member);
     }
@@ -148,5 +155,5 @@ class MemberController extends Controller
         else {
             abort(400);
         }
-    }
+  }
 }

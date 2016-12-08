@@ -28,36 +28,6 @@ angular.module('ecaApp')
         agrees: false,
     }
 
-    $scope.member2 = {
-        first_name: '',
-        last_name: '',
-        birthdate: '',
-        sex:'',
-        country: '',
-        faculty: '',
-        study_level: '',
-        years_study: '',
-        email: '',
-        password: '',
-        password_confirmation: '',
-        agrees: false,
-    }
-
-    $scope.member3 = {
-        first_name: '',
-        last_name: '',
-        birthdate: '',
-        sex:'',
-        country: '',
-        faculty: '',
-        study_level: '',
-        years_study: '',
-        email: '',
-        password: '',
-        password_confirmation: '',
-        agrees: false,
-    }
-
     $http.get('https://restcountries-v1.p.mashape.com/all', {headers: {
         'X-Mashape-Key': 'yhNwA5NusOmshGvY4U4Q0WBGXQS4p17AkD7jsnzl6zSzE44h5w',
         'Accept': 'application/json'
@@ -87,9 +57,9 @@ angular.module('ecaApp')
 
     $scope.signup = function() {
 
-        if (!$scope.appConfig.registration_enabled) {
+		/*if (!$scope.appConfig.registration_enabled) {
             return window.alert('Registration is currently closed!');
-        }
+        }*/
 
         $scope.members = [];
         $scope.error = "";

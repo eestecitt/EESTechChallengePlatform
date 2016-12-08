@@ -53,7 +53,17 @@ class GroupMemberController extends Controller
             'first_name' => 'required|max:255',
             'last_name' => 'required|max:255',
             'birthdate' => 'required|date',
-            'sex' => 'required|in:m,f'
+            'sex' => 'required|in:m,f,o',
+            'country' => 'required',
+            'uni'=> 'required|max:255',
+            'faculty' => 'required|max:255',
+            'years_study' => 'required|max:255',
+            'phone' => 'required|max:255',
+				'image' => 'required|max:255',
+            'tshirt' => 'required|in:S,M,L,XL,XXL',
+            'cv' => 'required|max:255',
+            'city' =>'required|in:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16'
+
         ]);
 
         $member = new Member($request->all());

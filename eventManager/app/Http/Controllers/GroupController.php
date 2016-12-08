@@ -54,8 +54,16 @@ class GroupController extends Controller
             $v->sometimes("members.$n.first_name", 'required|max:255', function($input) use($n) { return count($input->members >= $n); });
             $v->sometimes("members.$n.last_name", 'required|max:255', function($input) use($n) { return count($input->members >= $n); });
             $v->sometimes("members.$n.birthdate", 'required|date', function($input) use($n) { return count($input->members >= $n); });
-            $v->sometimes("members.$n.sex", 'required|in:m,f', function($input) use($n) { return count($input->members >= $n); });
+            $v->sometimes("members.$n.sex", 'required|in:m,f,o', function($input) use($n) { return count($input->members >= $n); });
             $v->sometimes("members.$n.country", 'required', function($input) use($n) { return count($input->members >= $n); });
+            $v->sometimes("members.$n.uni", 'required|max:255', function($input) use($n) { return count($input->members >= $n); });
+            $v->sometimes("members.$n.faculty", 'required|max:255', function($input) use($n) { return count($input->members >= $n); });
+            $v->sometimes("members.$n.years_study", 'required|max:255', function($input) use($n) { return count($input->members >= $n); });
+            $v->sometimes("members.$n.phone", 'required|max:20', function($input) use($n) { return count($input->members >= $n); });
+				$v->sometimes("members.$n.image", 'required|max:255', function($input) use($n) { return count($input->members >= $n); });
+            $v->sometimes("members.$n.tshirt", 'required|in:S,M,L,XL,XXL', function($input) use($n) { return count($input->members >= $n); });
+            $v->sometimes("members.$n.cv", 'required|max:255', function($input) use($n) { return count($input->members >= $n); });
+            $v->sometimes("members.$n.city", 'required|in:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16', function($input) use($n) { return count($input->members >= $n); });
             //$v->sometimes("members.$n.cv", 'required|mimes:pdf', function($input) use($n) { return count($input->members >= $n); });
         }
 
