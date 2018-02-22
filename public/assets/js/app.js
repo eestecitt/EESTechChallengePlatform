@@ -81,7 +81,12 @@ angular.module('ecaApp', [
 				templateUrl: 'templates/home.html',
 				onEnter: requireNoAuth
 			})
-            .state('faq', {
+      .state('cities', {
+            url: '/cities',
+            templateUrl: 'templates/cities.html',
+            onEnter: requireNoAuth
+          })
+      .state('faq', {
 				url: '/faq',
 				templateUrl: 'templates/faq.html',
 				onEnter: requireNoAuth
@@ -91,7 +96,7 @@ angular.module('ecaApp', [
         templateUrl: 'templates/sponsors.html',
         onEnter: requireNoAuth
       })
-            .state('terms', {
+      .state('terms', {
 				url: '/terms',
 				templateUrl: 'templates/terms.html',
 				onEnter: requireNoAuth
