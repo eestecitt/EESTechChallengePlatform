@@ -14,7 +14,6 @@ class TestDataSeeder extends Seeder
         // wipe previous data
         DB::table('groups')->delete();
         DB::table('members')->delete();
-        DB::table('scores')->delete();
         DB::table('ideas')->delete();
         DB::table('config')->delete();
         DB::table('l_cs')->delete();
