@@ -20,7 +20,6 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 </head>
 
-<<<<<<< HEAD
 <body ng-app="ecaApp" ng-controller="LandingLayoutController">
   <div class="ui top fixed borderless menu">
     <div class="ui grid container">
@@ -30,13 +29,12 @@
         </a>
         <div class="right small menu">
           <a ui-sref="home" class="item">Home</a>
-          <!--<a ng-click="scrollTo('cities')" class="item">Cities</a>-->
+          <a ui-sref="cities" class="item">Cities</a>
           <!--<a ui-sref="sponsors" class="item">Sponsors</a>-->
           <a href="http://blog-eestechchallenge.eestec.net/" class="item">Online Seminars</a>
           <!--  <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>-->
           <a ui-sref="faq" class="item">FAQ</a>
           <a ng-click="scrollTo('contact')" class="item">Contact</a>
-
           <div class="item" ng-show="!loggedin">
             <a ui-sref="login" class="ui ec-blue button">
               <i class="user icon"></i> Log in
@@ -51,79 +49,6 @@
               <a class="item" ng-click="logout()" ui-sref="login">
                 <i class="log out icon"></i> Log out
               </a>
-
-    <body ng-app="ecaApp" ng-controller="LandingLayoutController">
-        <div class="ui top fixed borderless menu">
-            <div class="ui grid container">
-                <div class="ui computer tablet only row">
-                    <a ui-sref="home" class="header down item">
-                        <img class="ui small fluid image" src="assets/images/ec-logo.png">
-                    </a>
-                    <div class="right small menu">
-                        <a ui-sref="home" class="item">Home</a>
-                        <a ui-sref="cities" class="item">Cities</a>
-                        <!--<a ng-click="scrollTo('cities')" class="item">Cities</a>-->
-                        <!--<a ui-sref="sponsors" class="item">Sponsors</a>-->
-                        <a href="http://blog-eestechchallenge.eestec.net/" class="item">Online Seminars</a>
-                      <!--  <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>-->
-                        <a ui-sref="faq" class="item">FAQ</a>
-                        <a ng-click="scrollTo('contact')" class="item">Contact</a>
-                        <!--
-                        <div class="item" ng-show="!loggedin">
-                            <a ui-sref="login" class="ui ec-blue button">
-                                <i class="user icon"></i> Log in
-                            </a>
-                        </div>
-                        <div ui-sref-active="active" class="ui dropdown item" ng-show="loggedin">
-							Account <i class="dropdown icon"></i>
-							<div class="menu">
-								<a class="item" ui-sref="authed.team">
-									<i class="users icon"></i> My Team
-								</a>
-								<a class="item" ng-click="logout()" ui-sref="login">
-									<i class="log out icon"></i> Log out
-								</a>
-							</div>
-						</div>-->
-                    </div>
-                </div>
-                <div class="ui mobile only row">
-                    <a ui-sref="home" class="header item">
-                        <img class="ui small fluid image" src="assets/images/ec-logo.png">
-                    </a>
-                    <!--
-                    <div class="right menu open">
-                        <div class="item" ng-show="!loggedin">
-                            <a ui-sref="login" class="ui ec-blue button">
-                                <i class="user icon"></i>
-                            </a>
-                        </div>
-                        <div class="ui dropdown item" ng-show="loggedin">
-							Account <i class="dropdown icon"></i>
-							<div class="menu">
-								<a class="item" ui-sref="authed.team">
-									<i class="users icon"></i> My Team
-								</a>
-								<a class="item" ng-click="logout()" ui-sref="login">
-									<i class="log out icon"></i> Log out
-								</a>
-							</div>
-						</div>-->
-                        <a class="toggle item">
-                            <i class="ec-blue sidebar icon"></i>
-                        </a>
-                    </div>
-                    <div class="ui inverted ec-blue vertical navbar menu hidden fluid">
-                        <a ui-sref="home" class="item">Home</a>
-                        <!--<a ng-click="scrollTo('cities')" class="item">Cities</a>-->
-                        <!--<a ui-sref="sponsors" class="item">Sponsors</a>-->
-                        <a href="http://blog-eestechchallenge.eestec.net/" class="item">Online Seminars</a>
-                        <a ui-sref="faq" class="item">FAQ</a>
-                        <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>
-                        <a ng-click="scrollTo('contact')" class="item">Contact</a>
-                    </div>
-                </div>
-
             </div>
           </div>
         </div>
@@ -132,36 +57,40 @@
         <a ui-sref="home" class="header item">
           <img class="ui small fluid image" src="assets/images/ec-logo.png">
         </a>
-        <!--
         <div class="right menu open">
-        <div class="item" ng-show="!loggedin">
-        <a ui-sref="login" class="ui ec-blue button">
-        <i class="user icon"></i>
-      </a>
+          <div class="item" ng-show="!loggedin">
+            <a ui-sref="login" class="ui ec-blue button">
+              <i class="user icon"></i>
+            </a>
+          </div>
+          <div class="ui dropdown item" ng-show="loggedin">
+            Account <i class="dropdown icon"></i>
+            <div class="menu">
+              <a class="item" ui-sref="authed.team">
+                <i class="users icon"></i> My Team
+              </a>
+              <a class="item" ng-click="logout()" ui-sref="login">
+                <i class="log out icon"></i> Log out
+              </a>
+            </div>
+          </div>
+          <a class="toggle item">
+            <i class="ec-blue sidebar icon"></i>
+          </a>
+        </div>
+        <div class="ui inverted ec-blue vertical navbar menu hidden fluid">
+          <a ui-sref="home" class="item">Home</a>
+          <a ui-sref="cities" class="item">Cities</a>
+          <!--<a ui-sref="sponsors" class="item">Sponsors</a>-->
+          <a href="http://blog-eestechchallenge.eestec.net/" class="item">Online Seminars</a>
+          <a ui-sref="faq" class="item">FAQ</a>
+          <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>
+          <a ng-click="scrollTo('contact')" class="item">Contact</a>
+        </div>
+      </div>
+
     </div>
-    <div class="ui dropdown item" ng-show="loggedin">
-    Account <i class="dropdown icon"></i>
-    <div class="menu">
-    <a class="item" ui-sref="authed.team">
-    <i class="users icon"></i> My Team
-  </a>
-  <a class="item" ng-click="logout()" ui-sref="login">
-  <i class="log out icon"></i> Log out
-</a>
-</div>
-</div>-->
-<a class="toggle item">
-  <i class="ec-blue sidebar icon"></i>
-</a>
-</div>
-<div class="ui inverted ec-blue vertical navbar menu hidden fluid">
-  <a ui-sref="home" class="item">Home</a>
-  <!--<a ng-click="scrollTo('cities')" class="item">Cities</a>-->
-  <!--<a ui-sref="sponsors" class="item">Sponsors</a>-->
-  <a href="http://blog-eestechchallenge.eestec.net/" class="item">Online Seminars</a>
-  <a ui-sref="faq" class="item">FAQ</a>
-  <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>
-  <a ng-click="scrollTo('contact')" class="item">Contact</a>
+  </div>
 </div>
 </div>
 </div>
@@ -176,7 +105,7 @@
         <h4 class="ui invertedheader">Overview</h4>
         <div class="ui inverted link list">
           <a ui-sref="home" class="item">Home</a>
-          <!--<a ng-click="scrollTo('cities')" class="item">Cities</a>-->
+          <a ng-click="cities" class="item">Cities</a>
           <!--<a ui-sref="sponsors" class="item">Sponsors</a>-->
           <a href="http://blog-eestechchallenge.eestec.net" class="item">Online Seminars</a>
           <a ui-sref="faq" class="item">FAQ</a>
@@ -223,7 +152,7 @@
     </div>
     <div class="ui inverted section divider"></div>
     <div class="ui horizontal center aligned inverted small container">
-      <span>&copy; 2017 <a href="http://www.eestec.net" target="_blank">EESTEC International</a></span>
+      <span>&copy; 2018 <a href="http://www.eestec.net" target="_blank">EESTEC International</a></span>
     </div>
   </div>
 </div>
