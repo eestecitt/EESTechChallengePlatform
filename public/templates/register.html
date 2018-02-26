@@ -10,18 +10,7 @@
 			</div>
 		</div>
 	</div>
-	<!--<div class="ui main container row">
-	<div class="ui icon message">
-		<i class="warning circle icon"></i>
-		<div class="content">
-			<div class="header">
-				Please use Chrome or Microsoft Edge for the registration to work properly!
-			</div>
-			<p>
 
-			</p>
-		</div>
-	</div>-->
 	<div class="ui main container row" ng-show="appConfig.registration_enabled">
 		<div class="ui info message">
   		<div class="header">
@@ -167,6 +156,13 @@
 							    	Password confirmation is required!
 							    </div>
 							</div>
+							<div class="field">
+								<label>Upload CV</label>
+		    					<input type="file" class="btn-file" name="password_confirmation" placeholder="Confirm Password" required ng-model="member2.password_confirmation">
+								<div class="ui pointing red basic label" ng-show="(member2Form.CV.$dirty || submitted2)  && member2Form.CV.$error.required">
+							    	CV is required!
+							    </div>
+							</div>
 							<div class="field ui slider checkbox">
 								<input type="checkbox" name="agrees" required ng-model="member2.agrees">
 								<label>Accept <a target="_blank" ui-sref="terms">terms and conditions</a></label>
@@ -288,6 +284,13 @@
 		    					<input type="password" name="password_confirmation" placeholder="Confirm Password" required ng-model="member1.password_confirmation">
 								<div class="ui pointing red basic label" ng-show="(member1Form.password_confirmation.$dirty || submitted)  && member1Form.password_confirmation.$error.required">
 							    	Password confirmation is required!
+							    </div>
+							</div>
+							<div class="field">
+								<label>Upload CV</label>
+		    				<input id="file" name="file" type="file" file-model="application.file" required />
+								<div class="ui pointing red basic label" ng-show="(member2Form.CV.$dirty || submitted2)  && member2Form.CV.$error.required">
+							    	CV is required!
 							    </div>
 							</div>
 							<div class="field ui slider checkbox">

@@ -60,11 +60,10 @@ class GroupController extends Controller
             $v->sometimes("members.$n.faculty", 'required|max:255', function($input) use($n) { return count($input->members >= $n); });
             $v->sometimes("members.$n.years_study", 'required|max:255', function($input) use($n) { return count($input->members >= $n); });
             $v->sometimes("members.$n.number", 'required|max:20', function($input) use($n) { return count($input->members >= $n); });
-				    //$v->sometimes("members.$n.image", 'required|max:255', function($input) use($n) { return count($input->members >= $n); });
             $v->sometimes("members.$n.tshirt", 'required|in:S,M,L,XL,XXL', function($input) use($n) { return count($input->members >= $n); });
-            //$v->sometimes("members.$n.cv", 'required|max:255', function($input) use($n) { return count($input->members >= $n); });
+            $v->sometimes("members.$n.cv", 'required|max:255', function($input) use($n) { return count($input->members >= $n); });
             //$v->sometimes("members.$n.city", 'required|in:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16', function($input) use($n) { return count($input->members >= $n); });
-            //$v->sometimes("members.$n.cv", 'required|mimes:pdf', function($input) use($n) { return count($input->members >= $n); });
+            $v->sometimes("members.$n.cv", 'required|mimes:pdf', function($input) use($n) { return count($input->members >= $n); });
         }
 
         $v->after(function($validator) use ($request) {
@@ -109,9 +108,9 @@ class GroupController extends Controller
                 $group->members()->save($qm);
 
                 // Handle cv PDF
-                //if ($m['cv']->isValid()) {
-                //    $m['cv']->move(storage_path('app/cvs'), $qm->id.'.pdf');
-                //}
+                if ($m['cv']->isValid()) {
+                    $m['cv']->move(storage_path('app/cvs'), $qm->id.'.pdf');
+                }
             }
         }
 
