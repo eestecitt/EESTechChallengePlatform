@@ -35,6 +35,7 @@
           <!--  <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>-->
           <a ui-sref="faq" class="item">FAQ</a>
           <a ng-click="scrollTo('contact')" class="item">Contact</a>
+          <!--
           <div class="item" ng-show="!loggedin">
             <a ui-sref="login" class="ui ec-blue button">
               <i class="user icon"></i> Log in
@@ -50,7 +51,8 @@
                 <i class="log out icon"></i> Log out
               </a>
             </div>
-          </div>
+          </div>-->
+
         </div>
       </div>
       <div class="ui mobile only row">
@@ -63,6 +65,7 @@
               <i class="user icon"></i>
             </a>
           </div>
+          <!--
           <div class="ui dropdown item" ng-show="loggedin">
             Account <i class="dropdown icon"></i>
             <div class="menu">
@@ -74,6 +77,7 @@
               </a>
             </div>
           </div>
+        -->
           <a class="toggle item">
             <i class="ec-blue sidebar icon"></i>
           </a>
