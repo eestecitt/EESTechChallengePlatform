@@ -31,7 +31,7 @@
           <a ui-sref="home" class="item">Home</a>
           <a ui-sref="cities" class="item">Cities</a>
           <!--<a ui-sref="sponsors" class="item">Sponsors</a>-->
-          <a href="http://blog-eestechchallenge.eestec.net/" class="item">Online Seminars</a>
+          <a href="https://blog-eestechchallenge.eestec.net/" class="item">Online Seminars</a>
           <!--  <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>-->
           <a ui-sref="faq" class="item">FAQ</a>
           <a ng-click="scrollTo('contact')" class="item">Contact</a>
@@ -86,7 +86,7 @@
           <a ui-sref="home" class="item">Home</a>
           <a ui-sref="cities" class="item">Cities</a>
           <!--<a ui-sref="sponsors" class="item">Sponsors</a>-->
-          <a href="http://blog-eestechchallenge.eestec.net/" class="item">Online Seminars</a>
+          <a href="https://blog-eestechchallenge.eestec.net/" class="item">Online Seminars</a>
           <a ui-sref="faq" class="item">FAQ</a>
           <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>
           <a ng-click="scrollTo('contact')" class="item">Contact</a>
