@@ -62,11 +62,11 @@
           <img class="ui small fluid image" src="assets/images/ec-logo.png">
         </a>
         <div class="right menu open">
-          <div class="item" ng-show="!loggedin">
+          <!-- <div class="item" ng-show="!loggedin">
             <a ui-sref="login" class="ui ec-blue button">
               <i class="user icon"></i>
             </a>
-          </div>
+          </div> -->
           <!--
           <div class="ui dropdown item" ng-show="loggedin">
             Account <i class="dropdown icon"></i>
