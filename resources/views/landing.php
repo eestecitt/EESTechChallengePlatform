@@ -10,7 +10,7 @@
   <meta property="og:image" content="assets/images/ec-big-logo.png" />
 
   <!-- Site Properities -->
-  <title>EESTech Challenge 2017-2018</title>
+  <title>EESTech Challenge 2018-2019</title>
 
   <link rel="icon" type="image/png" href="assets/images/favicon_ec.png" />
   <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
@@ -18,6 +18,8 @@
   <link rel="stylesheet" type="text/css" href="assets/css/eca.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body ng-app="ecaApp" ng-controller="LandingLayoutController">
@@ -31,7 +33,7 @@
           <a ui-sref="home" class="item">Home</a>
           <a ui-sref="cities" class="item">Cities</a>
           <a ui-sref="sponsors" class="item">Sponsors</a>
-          <a href="https://blog-eestechchallenge.eestec.net/" class="item">Online Seminars</a>
+          <a href="#" class="item">Academic</a>
           <!--  <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>-->
           <a ui-sref="faq" class="item">FAQ</a>
           <a ng-click="scrollTo('contact')" class="item">Contact</a>
@@ -86,7 +88,7 @@
           <a ui-sref="home" class="item">Home</a>
           <a ui-sref="cities" class="item">Cities</a>
           <a ui-sref="sponsors" class="item">Sponsors</a>
-          <a href="https://blog-eestechchallenge.eestec.net/" class="item">Online Seminars</a>
+          <a href="#" class="item">Academic</a>
           <a ui-sref="faq" class="item">FAQ</a>
           <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>
           <a ng-click="scrollTo('contact')" class="item">Contact</a>
@@ -109,9 +111,9 @@
         <h4 class="ui invertedheader">Overview</h4>
         <div class="ui inverted link list">
           <a ui-sref="home" class="item">Home</a>
-          <a ng-click="cities" class="item">Cities</a>
+          <a ui-sref="cities" class="item">Cities</a>
           <a ui-sref="sponsors" class="item">Sponsors</a>
-          <a href="http://blog-eestechchallenge.eestec.net" class="item">Online Seminars</a>
+          <a href="#" class="item">Academic</a>
           <a ui-sref="faq" class="item">FAQ</a>
           <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>
           <a ng-click="scrollTo('contact')" class="item">Contact</a>
@@ -133,7 +135,7 @@
             </button>
             Facebook
           </a>
-          <a href="https://twitter.com/eestec" target="_blank" class="item">
+          <a href="https://twitter.com/eestechallenge" target="_blank" class="item">
             <button class="ui circular twitter icon button">
               <i class="twitter icon"></i>
             </button>

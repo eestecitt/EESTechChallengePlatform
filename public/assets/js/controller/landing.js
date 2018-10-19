@@ -79,22 +79,22 @@ function($scope, $rootScope, $state, $location, $anchorScroll, User, API, $windo
   }
 
   $scope.milica = function() {
-    $window.open("https://www.linkedin.com/in/elenaxanthi/");
+    $window.open("https://www.linkedin.com/in/natasa-saponjic-09800b77/");
   }
 
   $scope.ema = function() {
-    $window.open("https://www.linkedin.com/in/giorgos-siachamis-43954914b/");
+    $window.open("https://www.linkedin.com/in/milica-lazi%C4%87-796165161/");
   }
 
   $scope.melina = function() {
-    $window.open("https://www.linkedin.com/in/georgedaniil");
+    $window.open("https://www.linkedin.com/in/dafni-spyridoula-ventza-73960416a/");
   }
 
   $scope.damir = function() {
-    $window.open("https://www.linkedin.com/in/boban-poznanovic/");
+    $window.open("https://www.linkedin.com/in/vasileios-konstas-76b6b0161/");
   }
 
   $scope.marta = function() {
-    $window.open("https://www.linkedin.com/in/tijana-stanojkovi%C4%87-89505b134/");
+    $window.open("https://www.linkedin.com/in/agata-kawalec-114364158/");
   }
 }])
