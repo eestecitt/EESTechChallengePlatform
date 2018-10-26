@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EESTech Challenge is a brand new competition organized by EESTEC, that has the aim to create opportunities for European students to gain knowledge in the field of EECS and develop a professional network.">
+  <meta name="description" content="EESTech Challenge is a competition organized by EESTEC, that has the aim to create opportunities for European students to gain knowledge in the field of EECS and develop a professional network.">
   <meta property="og:image" content="assets/images/ec-big-logo.png" />
 
   <!-- Site Properities -->
@@ -102,7 +102,7 @@
 </div>
 </div>
 
-<div ui-view></div>
+<div ui-view autoscroll="true"></div>
 
 <div class="ui ec-blue inverted vertical footer bottom segment row">
   <div class="ui container">
@@ -147,7 +147,7 @@
             </button>
             Instagram
           </a>
-          <a href="https://www.linkedin.com/groups/66771" target="_blank" class="item">
+          <a href="https://www.linkedin.com/in/eestech-challenge-337789132/" target="_blank" class="item">
             <button class="ui circular linkedin icon button">
               <i class="linkedin icon"></i>
             </button>
