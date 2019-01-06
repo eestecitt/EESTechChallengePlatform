@@ -95,6 +95,6 @@ function($scope, $rootScope, $state, $location, $anchorScroll, User, API, $windo
   }
 
   $scope.marta = function() {
-    $window.open("https://www.linkedin.com/in/agata-kawalec-114364158/");
+    $window.open("https://www.linkedin.com/in/georgia-kourou-217308152/");
   }
 }])

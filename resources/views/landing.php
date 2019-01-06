@@ -108,7 +108,7 @@
   <div class="ui container">
     <div class="ui stackable grid">
       <div class="five wide column">
-        <h4 class="ui invertedheader">Overview</h4>
+        <h4 class="ui inverted header">Overview</h4>
         <div class="ui inverted link list">
           <a ui-sref="home" class="item">Home</a>
           <a ui-sref="cities" class="item">Cities</a>

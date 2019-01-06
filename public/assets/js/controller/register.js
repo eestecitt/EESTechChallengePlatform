@@ -31,6 +31,7 @@ angular.module('ecaApp')
     email: '',
     password: '',
     password_confirmation: '',
+    CV: '',
     agrees: false,
   }
 
@@ -46,6 +47,7 @@ angular.module('ecaApp')
     email: '',
     password: '',
     password_confirmation: '',
+    CV: '',
     agrees: false,
   }
 
@@ -61,6 +63,7 @@ angular.module('ecaApp')
     email: '',
     password: '',
     password_confirmation: '',
+    CV: '',
     agrees: false,
   }
 
