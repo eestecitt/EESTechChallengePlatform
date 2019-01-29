@@ -145,7 +145,109 @@ $stateProvider
   url: '/application',
   templateUrl: 'templates/application.html',
   onEnter: requireAuth
+})
+// Cities Application Forms
+.state('aveiro', {
+  url: '/cities/aveiro',
+  templateUrl: 'templates/cities/aveiro.html',
+  onEnter: requireNoAuth
+})
+.state('milan', {
+  url: '/cities/milan',
+  templateUrl: 'templates/cities/milan.html',
+  onEnter: requireNoAuth
+})
+.state('athens', {
+  url: '/cities/athens',
+  templateUrl: 'templates/cities/athens.html',
+  onEnter: requireNoAuth
+})
+.state('belgrade', {
+  url: '/cities/belgrade',
+  templateUrl: 'templates/cities/belgrade.html',
+  onEnter: requireNoAuth
+})
+.state('delft', {
+  url: '/cities/delft',
+  templateUrl: 'templates/cities/delft.html',
+  onEnter: requireNoAuth
+})
+.state('e_sarajevo', {
+  url: '/cities/e_sarajevo',
+  templateUrl: 'templates/cities/e_sarajevo.html',
+  onEnter: requireNoAuth
+})
+.state('ljubljana', {
+  url: '/cities/ljubljana',
+  templateUrl: 'templates/cities/ljubljana.html',
+  onEnter: requireNoAuth
+})
+.state('munich', {
+  url: '/cities/munich',
+  templateUrl: 'templates/cities/munich.html',
+  onEnter: requireNoAuth
+})
+.state('nis', {
+  url: '/cities/nis',
+  templateUrl: 'templates/cities/nis.html',
+  onEnter: requireNoAuth
+})
+.state('novisad', {
+  url: '/cities/novisad',
+  templateUrl: 'templates/cities/novisad.html',
+  onEnter: requireNoAuth
+})
+.state('patras', {
+  url: '/cities/patras',
+  templateUrl: 'templates/cities/patras.html',
+  onEnter: requireNoAuth
+})
+.state('sarajevo', {
+  url: '/cities/sarajevo',
+  templateUrl: 'templates/cities/sarajevo.html',
+  onEnter: requireNoAuth
+})
+.state('thessaloniki', {
+  url: '/cities/thessaloniki',
+  templateUrl: 'templates/cities/thessaloniki.html',
+  onEnter: requireNoAuth
+})
+.state('tirana', {
+  url: '/cities/tirana',
+  templateUrl: 'templates/cities/tirana.html',
+  onEnter: requireNoAuth
+})
+.state('tuzla', {
+  url: '/cities/tuzla',
+  templateUrl: 'templates/cities/tuzla.html',
+  onEnter: requireNoAuth
+})
+.state('xanthi', {
+  url: '/cities/xanthi',
+  templateUrl: 'templates/cities/xanthi.html',
+  onEnter: requireNoAuth
+})
+.state('zurich', {
+  url: '/cities/zurich',
+  templateUrl: 'templates/cities/zurich.html',
+  onEnter: requireNoAuth
+})
+.state('dublin', {
+  url: '/cities/dublin',
+  templateUrl: 'templates/cities/dublin.html',
+  onEnter: requireNoAuth
+})
+.state('duisburg', {
+  url: '/cities/milan',
+  templateUrl: 'templates/cities/duisburg.html',
+  onEnter: requireNoAuth
+})
+.state('valencia', {
+  url: '/cities/valencia',
+  templateUrl: 'templates/cities/valencia.html',
+  onEnter: requireNoAuth
 });
+
 
 }
 ])
