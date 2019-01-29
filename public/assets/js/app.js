@@ -238,7 +238,7 @@ $stateProvider
   onEnter: requireNoAuth
 })
 .state('duisburg', {
-  url: '/cities/milan',
+  url: '/cities/duisburg',
   templateUrl: 'templates/cities/duisburg.html',
   onEnter: requireNoAuth
 })
