@@ -33,7 +33,8 @@
           <a ui-sref="home" class="item">Home</a>
           <a ui-sref="cities" class="item">Cities</a>
           <a ui-sref="sponsors" class="item">Sponsors</a>
-          <a href="#" class="item">Academic</a>
+          <a ui-sref="universities" class="item">Universities</a>
+          <a href="#" class="item">Blog</a>
           <!--  <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>-->
           <a ui-sref="faq" class="item">FAQ</a>
           <a ng-click="scrollTo('contact')" class="item">Contact</a>
@@ -88,7 +89,8 @@
           <a ui-sref="home" class="item">Home</a>
           <a ui-sref="cities" class="item">Cities</a>
           <a ui-sref="sponsors" class="item">Sponsors</a>
-          <a href="#" class="item">Academic</a>
+          <a ui-sref="universities" class="item">Universities</a>
+          <a href="#" class="item">Blog</a>
           <a ui-sref="faq" class="item">FAQ</a>
           <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>
           <a ng-click="scrollTo('contact')" class="item">Contact</a>
@@ -113,7 +115,8 @@
           <a ui-sref="home" class="item">Home</a>
           <a ui-sref="cities" class="item">Cities</a>
           <a ui-sref="sponsors" class="item">Sponsors</a>
-          <a href="#" class="item">Academic</a>
+          <a ui-sref="universities" class="item">Universities</a>
+          <a href="#" class="item">Blog</a>
           <a ui-sref="faq" class="item">FAQ</a>
           <a ng-click="scrollTo('eestec')" class="item">EESTEC</a>
           <a ng-click="scrollTo('contact')" class="item">Contact</a>
@@ -147,7 +150,7 @@
             </button>
             Instagram
           </a>
-          <a href="https://www.linkedin.com/in/eestech-challenge-337789132/" target="_blank" class="item">
+          <a href="https://www.linkedin.com/company/eestech-challenge/" target="_blank" class="item">
             <button class="ui circular linkedin icon button">
               <i class="linkedin icon"></i>
             </button>
@@ -158,7 +161,7 @@
     </div>
     <div class="ui inverted section divider"></div>
     <div class="ui horizontal center aligned inverted small container">
-      <span>&copy; 2018 <a href="http://www.eestec.net" target="_blank">EESTEC International</a></span>
+      <span>&copy; 2019 <a href="http://www.eestec.net" target="_blank">EESTEC International</a></span>
     </div>
   </div>
 </div>
