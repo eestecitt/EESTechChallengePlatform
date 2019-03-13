@@ -96,6 +96,11 @@ $stateProvider
   templateUrl: 'templates/sponsors.html',
   onEnter: requireNoAuth
 })
+.state('universities', {
+  url: '/universities',
+  templateUrl: 'templates/universities.html',
+  onEnter: requireNoAuth
+})
 .state('terms', {
   url: '/terms',
   templateUrl: 'templates/terms.html',
